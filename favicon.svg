@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient
+      id="dimffGradient"
+      x1="8"
+      y1="8"
+      x2="56"
+      y2="56"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#45D9FF"/>
+      <stop offset="0.5" stop-color="#9B7CFF"/>
+      <stop offset="1" stop-color="#FF6B78"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect
+    width="64"
+    height="64"
+    rx="12"
+    fill="#090B12"
+  />
+
+  <!-- DIMFF D mark -->
+  <path
+    d="M14 10H32C44.7 10 52 17.5 52 32C52 46.5 44.7 54 32 54H14V10Z"
+    fill="url(#dimffGradient)"
+  />
+
+  <!-- Inner cutout -->
+  <path
+    d="M25 20V44H31C38.2 44 41 40.1 41 32C41 23.9 38.2 20 31 20H25Z"
+    fill="#090B12"
+  />
+</svg>

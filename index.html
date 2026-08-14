@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DIMFF — a fast Windows desktop application for viewing, editing, and removing image metadata.">
+  <meta name="theme-color" content="#0b0d0c">
+  <title>DIMFF — Image Metadata, Under Control</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="DIMFF home">
+      <span class="brand-mark">D</span>
+      <span>DIMFF</span>
+    </a>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#technical">Technical</a>
+      <a href="#limits">Limits</a>
+    </nav>
+    <a class="header-link" href="https://github.com/ADevNamedDeLL/" target="_blank" rel="noopener">My GitHub <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> Windows metadata utility / local processing</div>
+        <h1>Image metadata,<br><em>under control.</em></h1>
+        <p class="hero-text">
+          DIMFF is a focused Windows application for inspecting, editing, and stripping image metadata without turning a simple task into a complicated workflow.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/ADevNamedDeLL/DIMFF" target="_blank" rel="noopener">Open repository <span>↗</span></a>
+          <a class="button secondary" href="#features">Explore DIMFF</a>
+        </div>
+        <div class="hero-meta">
+          <span>C#</span><i></i><span>.NET WinForms</span><i></i><span>Windows</span>
+        </div>
+      </div>
+
+      <div class="scanner" aria-label="Illustrative metadata scanner">
+        <div class="scanner-top">
+          <span>DIMFF / INSPECT</span>
+          <span class="status">READY</span>
+        </div>
+        <div class="scanner-image">
+          <div class="scan-lines"></div>
+          <div class="frame-corner tl"></div>
+          <div class="frame-corner tr"></div>
+          <div class="frame-corner bl"></div>
+          <div class="frame-corner br"></div>
+          <div class="image-symbol">IMG</div>
+          <div class="scan-bar"></div>
+        </div>
+        <div class="metadata">
+          <div><span>FILE</span><strong>image_0428.jpg</strong></div>
+          <div><span>TYPE</span><strong>JPEG / EXIF</strong></div>
+          <div><span>GPS</span><strong class="removed">REMOVABLE</strong></div>
+          <div><span>EXIF</span><strong>38 TAGS</strong></div>
+        </div>
+        <div class="scanner-footer">
+          <span>METADATA CONTROL</span>
+          <span>01 / 04</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement">
+      <div class="section-number">01</div>
+      <div>
+        <p class="kicker">The idea</p>
+        <h2>Useful metadata when you need it.<br><span>Gone when you don't.</span></h2>
+      </div>
+      <p class="statement-copy">
+        DIMFF keeps image metadata work local, direct, and understandable. Open an image, see what is embedded, change supported fields, or re-encode it without carrying the original metadata forward.
+      </p>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">02 / Capabilities</p>
+          <h2>Built around the<br>metadata itself.</h2>
+        </div>
+        <p>One small utility, two clear jobs: understand the data and remove what you no longer want attached to the image.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-wide">
+          <div class="feature-index">01</div>
+          <div>
+            <p class="feature-label">CLEAN</p>
+            <h3>Strip metadata in a single pass.</h3>
+            <p>DIMFF can re-encode supported images to remove embedded metadata. Keep the result as a new file or overwrite the original.</p>
+          </div>
+          <div class="mini-ui clean-ui">
+            <span>INPUT</span><b>image.jpg</b>
+            <div class="arrow">→</div>
+            <span>OUTPUT</span><b>clean.jpg</b>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-index">02</div>
+          <p class="feature-label">INSPECT</p>
+          <h3>Read the details.</h3>
+          <p>Browse EXIF, TIFF, GPS, MakerNote and Windows XP fields in a human-readable interface.</p>
+          <div class="tag-cloud"><span>EXIF</span><span>GPS</span><span>TIFF</span><span>XP</span></div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-index">03</div>
+          <p class="feature-label">EDIT</p>
+          <h3>Change supported fields.</h3>
+          <p>ASCII-based EXIF tags can be edited directly instead of forcing you into a separate metadata tool.</p>
+          <div class="code-line">ExposureTime&nbsp;&nbsp; 1/60&nbsp;&nbsp; <em>0.0167 s</em></div>
+        </article>
+
+        <article class="feature-card feature-wide">
+          <div class="feature-index">04</div>
+          <div>
+            <p class="feature-label">DECODE</p>
+            <h3>Understand common EXIF types.</h3>
+            <p>The custom decoder handles the core TIFF/EXIF value types and provides raw fallback handling where a value is not represented as a simple text field.</p>
+          </div>
+          <div class="types">
+            <span>ASCII</span><span>SHORT</span><span>LONG</span><span>RATIONAL</span><span>SRATIONAL</span><span>BYTE</span><span>UNDEFINED</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow" class="workflow section">
+      <div class="workflow-intro">
+        <p class="kicker">03 / Workflow</p>
+        <h2>No maze.<br>Just a clear path.</h2>
+        <p>DIMFF is deliberately focused. The interface follows the task instead of making you navigate through a wall of settings.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span>01</span><div><h3>Select</h3><p>Choose the image you want to inspect or clean.</p></div>
+        </div>
+        <div class="step">
+          <span>02</span><div><h3>Inspect</h3><p>Review the available metadata and identify the fields that matter.</p></div>
+        </div>
+        <div class="step">
+          <span>03</span><div><h3>Edit or remove</h3><p>Change supported ASCII fields or remove metadata through re-encoding.</p></div>
+        </div>
+        <div class="step">
+          <span>04</span><div><h3>Save</h3><p>Keep the original or write a cleaned version as a separate file.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="technical" class="technical section">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">04 / Under the hood</p>
+          <h2>Small stack.<br>Purpose-built.</h2>
+        </div>
+      </div>
+      <div class="specs">
+        <div class="spec"><span>LANGUAGE</span><strong>C#</strong></div>
+        <div class="spec"><span>FRAMEWORK</span><strong>.NET WinForms</strong></div>
+        <div class="spec"><span>IMAGE HANDLING</span><strong>System.Drawing / GDI+</strong></div>
+        <div class="spec"><span>METADATA</span><strong>Custom EXIF decoder</strong></div>
+        <div class="spec"><span>JPEG / JPG</span><strong>Supported</strong></div>
+        <div class="spec"><span>TIFF</span><strong>EXIF supported</strong></div>
+        <div class="spec"><span>PNG</span><strong>Limited support</strong></div>
+        <div class="spec"><span>PLATFORM</span><strong>Windows</strong></div>
+      </div>
+    </section>
+
+    <section id="limits" class="limits section">
+      <div class="limit-title">
+        <p class="kicker">05 / Current boundaries</p>
+        <h2>Know what DIMFF<br>doesn't do yet.</h2>
+      </div>
+      <div class="limit-list">
+        <div><span>01</span><p>Binary EXIF fields such as RATIONAL, SRATIONAL and UNDEFINED are currently read-only.</p></div>
+        <div><span>02</span><p>MakerNote data may decode inconsistently depending on the camera that produced it.</p></div>
+        <div><span>03</span><p>PNG metadata support is limited because PNG does not use the same EXIF structure as JPEG and TIFF.</p></div>
+        <div><span>04</span><p>GDI+ re-encoding can affect uncommon or unusual embedded color profiles.</p></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-mark">D</div>
+      <p class="kicker">DIMFF / OPEN SOURCE</p>
+      <h2>Take control of<br>what your images carry.</h2>
+      <p>Explore the source, follow development, or build the project yourself.</p>
+      <a class="button primary" href="https://github.com/ADevNamedDeLL/DIMFF" target="_blank" rel="noopener">Go to GitHub <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>DIMFF</strong><span>Delete Image MetaData Fucking Fast</span></div>
+    <div><span>Built in C#</span><span>MIT License</span><a href="https://github.com/ADevNamedDeLL/DIMFF" target="_blank" rel="noopener">Repository ↗</a></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
